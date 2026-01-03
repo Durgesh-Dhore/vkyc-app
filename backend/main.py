@@ -300,7 +300,7 @@ def get_db():
 
 @app.get("/")
 async def root():
-    return {"message": "VKYC Backend API"}
+    return {"message": "VKYC Backend API, CI/CD Test Successful"}
 
 @app.post("/api/customers/create")
 async def create_customer(customer: CustomerCreate, db: Session = Depends(get_db)):
@@ -1364,3 +1364,4 @@ if __name__ == "__main__":
         timeout_keep_alive=30,
         log_level="info"
     )
+
